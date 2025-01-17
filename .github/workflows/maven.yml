@@ -20,5 +20,6 @@ jobs:
     - name: Build with Maven
       run: mvn package --file pom.xml # change the pom.xml to correct path if needed
     - uses: actions/upload-artifact@v4
-      name: my-artifact
-      path: target/*.jar
+      with:
+        name: my-artifact
+        path: target/*.jar
